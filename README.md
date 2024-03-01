@@ -8,16 +8,6 @@ Deploy a personal serverless AWS website swiftly and easily using Terraform and 
 
 ---
 
-## Buy me a coffee
-
-
-Please consider making a small donation if you use, like, or learned something with this project. 
-
-
-<a href="https://www.buymeacoffee.com/jnhernandez" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
----
-
 ## Features
 - GitHub Actions
 - AWS Serverless
@@ -39,6 +29,14 @@ Details regarding how to deploy will go here.
 A special thank you to the following resources used during this development process.
 
 - README Template: [Igor Antun - Node Chat](https://github.com/IgorAntun/node-chat#readme)
+
+---
+
+## Buy me a coffee
+
+Please consider making a small donation if you use, like, or learned something with this project. 
+
+<a href="https://www.buymeacoffee.com/jnhernandez" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ---
 
