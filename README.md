@@ -11,6 +11,9 @@ Deploy a personal serverless AWS website swiftly and easily using Terraform and 
 ## Features
 - GitHub Actions
 - AWS Serverless
+  - Application Load Balancer
+  - AWS CloudFront
+  - Amazon S3
 - Terraform
 
 ---
