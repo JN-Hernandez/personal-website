@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
+      source = "hashicorp/aws"
     }
   }
 
@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-east-1"
+  region = "us-east-1"
 }
 
 ###########
@@ -20,8 +20,8 @@ resource "aws_s3_bucket" "personal_website_s3" {
   bucket = "${var.owner_name}-${var.project}-s3-${var.aws_region}"
 
   tags = {
-    Name        = "${var.owner_name}-${var.project}-s3-${var.aws_region}"
-    Project     = var.project
+    Name    = "${var.owner_name}-${var.project}-s3-${var.aws_region}"
+    Project = var.project
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "personal_website_
 
   rule {
     apply_server_side_encryption_by_default {
-      sse_algorithm     = "AES256"
+      sse_algorithm = "AES256"
     }
   }
 }
@@ -73,7 +73,7 @@ resource "aws_s3_bucket_website_configuration" "personal_website_s3_website" {
 resource "aws_s3_bucket_public_access_block" "personal_website_s3_access" {
   bucket = aws_s3_bucket.personal_website_s3.id
 
-  block_public_policy     = true
+  block_public_policy = true
 }
 
 resource "aws_s3_bucket_policy" "personal_website_s3_policy" {
