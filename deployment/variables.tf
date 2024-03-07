@@ -1,6 +1,10 @@
 variable "account_id" {
-  default = "123456789012"
-  type    = string
+  type      = string
+  sensitive = true
+}
+
+data "github_actions_secret" "AWS_ACCOUNT_ID" {
+  secret_name = "AWS_ACCOUNT_ID"
 }
 
 variable "aws_region" {
