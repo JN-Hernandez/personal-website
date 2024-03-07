@@ -1,10 +1,6 @@
 variable "account_id" {
-  type      = string
+  type    = string
   sensitive = true
-}
-
-data "github_actions_secret" "AWS_ACCOUNT_ID" {
-  secret_name = "AWS_ACCOUNT_ID"
 }
 
 variable "aws_region" {

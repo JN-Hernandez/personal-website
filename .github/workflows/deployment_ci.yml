@@ -27,6 +27,8 @@ jobs:
         if: |
           github.ref == 'refs/heads/develop' ||
           startsWith(github.ref, 'refs/heads/test/')
+        env:
+          TF_VAR_account_id: ${{ secrets.AWS_ACCOUNT_ID }}
         run: |
           cd ./deployment
           echo "----- Running Terraform Init -----"
