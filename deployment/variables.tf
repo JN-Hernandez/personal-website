@@ -1,6 +1,7 @@
 variable "account_id" {
-  default = "123456789012"
-  type    = string
+  default   = "123456789012"
+  type      = string
+  sensitive = true
 }
 
 variable "aws_region" {
