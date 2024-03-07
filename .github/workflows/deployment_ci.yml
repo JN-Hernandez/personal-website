@@ -29,5 +29,6 @@ jobs:
         run: |
           echo `pwd`
           echo "tfpath ${{ github.event.inputs.tfpath }}"
+          cd ./deployment
           echo "** Running Terraform Init **"
           terraform init
