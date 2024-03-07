@@ -1,0 +1,33 @@
+name: Deployment CI
+
+on:
+  push:
+    branches:
+      - main
+      - hotfix/**
+      - release/**
+      - test/**
+  pull_request:
+
+jobs:
+  infrastructure:
+    name: infrastructure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Setup Terraform CLI
+        uses: hashicorp/setup-terraform@v2.0.2
+
+      - name: Deploy infrastructure
+        run: |
+          echo `pwd`
+          echo "tfpath ${{ github.event.inputs.tfpath }}"
+          echo "** Running Terraform Init **"
+          terraform init
