@@ -2,7 +2,7 @@ Personal Website
 ============
 [![GitHub Stars](https://img.shields.io/github/stars/JN-Hernandez/personal-website.svg)](https://github.com/JN-Hernandez/personal-website/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/JN-Hernandez/personal-website.svg)](https://github.com/JN-Hernandez/personal-website/issues) [![Current Version](https://img.shields.io/badge/version-0.0.0-green.svg)](https://github.com/JN-Hernandez/personal-website) [![Live Demo](https://img.shields.io/badge/demo-offline-green.svg)](https://igorantun.com/chat)
 
-Deploy a personal serverless AWS website swiftly and easily using Terraform and GitHub Actions.
+Deploy a static serverless AWS website swiftly and easily using Terraform and GitHub Actions.
 
 [//]: # (![Website Preview Screenshot]&#40;http://i.imgur.com/lgRe8z4.png&#41;)
 
