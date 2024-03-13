@@ -1,0 +1,37 @@
+name: Deployment CI
+
+on:
+  push:
+    branches:
+      - main
+      - test/**
+  pull_request:
+
+jobs:
+  infrastructure:
+    name: infrastructure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Setup Terraform CLI
+        uses: hashicorp/setup-terraform@v2.0.2
+
+      - name: Deploy infrastructure
+        if: |
+          github.ref == 'refs/heads/develop' ||
+          startsWith(github.ref, 'refs/heads/test/')
+        env:
+          TF_VAR_account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+        run: |
+          cd ./deployment
+          echo "----- Running Terraform Init -----"
+          terraform init
+          echo "----- Running Terraform Plan -----"
+          terraform plan
