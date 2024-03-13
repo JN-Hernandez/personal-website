@@ -19,12 +19,14 @@ Deploy a static serverless AWS website swiftly and easily using Terraform and Gi
 ---
 
 ## Setup
-Details regarding setup will go here.
+- Details regarding setup will go here.
+- Details regarding setup will go here.
 
 ---
 
 ## Usage
-Details regarding how to deploy will go here.
+- Details regarding how to deploy will go here.
+- Details regarding how to deploy will go here.
 
 ---
 
